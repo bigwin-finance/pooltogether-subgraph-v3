@@ -8,6 +8,10 @@
     "address": "0x2d22175E01eE6Db5A6512bc8D572a6da13754688",
     "startBlock": "7399763"
   },
+  "compoundPrizePoolProxyFactory_v3_2_0_beta2": {
+    "address": "0xb0532905c445C1A81071b3411cB48dDa4126f432",
+    "startBlock": "7975990"
+  },
   "compoundPrizePoolProxyFactory_v3_2_0": {
     "address": "0x75cd7d61d1E1E4272e7C0Ee0ba1BC442657A3e6B",
     "startBlock": "8062640"

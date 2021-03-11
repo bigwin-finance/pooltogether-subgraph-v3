@@ -119,6 +119,31 @@ dataSources:
 
   {{/compoundPrizePoolProxyFactory_v3_1_0}}
 
+  {{#compoundPrizePoolProxyFactory_v3_2_0_beta2}}
+  - name: CompoundPrizePoolProxyFactory_v3_2_0_beta2
+    kind: ethereum/contract
+    network: {{network}}
+    source:
+      address: "{{address}}"
+      abi: CompoundPrizePoolProxyFactory_v3_1_0
+      startBlock: {{startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - CompoundPrizePool
+      abis:
+        - name: CompoundPrizePoolProxyFactory_v3_1_0
+          file: ./abis/v3_1_0/abis/CompoundPrizePoolProxyFactory.json
+      eventHandlers:
+        - event: ProxyCreated(address)
+          handler: handleProxyCreated
+      file: ./src/mappingForCompoundPrizePoolProxyFactory_v3.ts
+
+  {{/compoundPrizePoolProxyFactory_v3_2_0_beta2}}
+
+
     {{#compoundPrizePoolProxyFactory_v3_3_2}} # doesnt seem to be a way to add to the above
   - name: CompoundPrizePoolProxyFactory_v3_3_2
     kind: ethereum/contract
